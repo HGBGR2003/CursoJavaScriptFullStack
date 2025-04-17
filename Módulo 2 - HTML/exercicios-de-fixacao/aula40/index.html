@@ -23,17 +23,22 @@
 
            <!-- Label para os checboxes no inputs com o for de opcao como parametro padrão para todos. -->
 
-           <label for="opcao">Área de Atuação Profissional</label><br>
+           <label for="opcao">Área de Atuação Profissional:</label><br>
            <label for="opcao">Desenvolvimento</label>
-           <input type="checkbox" name="desenvolvendo" id="opcao"><br>
+           <input type="radio" name="desenvolvendo" id="opcao">
            <label for="opcao">Quality Assurance (QA)</label>
-           <input type="checkbox" name="qa" id="opcao">
-           <br>
+           <input type="radio" name="qa" id="opcao">
            <label for="opcao">Análise de Dados</label>
-           <input type="checkbox" name="analise-dados" id="opcao"><br>
+           <input type="radio" name="analise-dados" id="opcao">
            <label for="opcao">Infraestrutura</label>
-           <input type="checkbox" name="infraestrutura" id="opcao"><br><br>
+           <br><br>
            
+           <label for="observando">Observações:</label><br>
+           <textarea name="Observacoes sobre a pessoa" placeholder="Conte alguma coisa de obsevação" id="observando" cols="40"></textarea><br><br>
+
+           <input type="checkbox" name="novidades" id="novidades">
+           <label for="novidades">Desejo receber novidades e ofertas por email</label>
+           <br><br>
         
            <button type="submit">Enviar</button>
     </form>
