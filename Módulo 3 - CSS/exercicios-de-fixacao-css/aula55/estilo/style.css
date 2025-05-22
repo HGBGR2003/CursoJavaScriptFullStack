@@ -3,4 +3,29 @@ body{
     background-size: cover;
 }
 
-/* Continuo amanhã, quando tiver menos cansado. */
+header{ 
+    color: #ffff;
+    background-color: #248030;
+    border-radius: 4px;
+}
+
+main{
+    background-color: #ffff8c;
+    border-radius: 8px;
+}
+
+button{
+    background-color: #248030;
+    border-radius: 8px;
+}
+
+footer{
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+a{
+    color: #248030;
+}
+
+/*Cores usadas: #248030 e #ffff8c <= (Cores utilizadas no header, main e buttone footer)*/
