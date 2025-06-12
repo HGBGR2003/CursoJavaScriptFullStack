@@ -1,0 +1,74 @@
+/* Seletor Universal */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* seletor de tag <= Conteudo Novo */
+header, footer{  
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+/* Seletor de elementos aninhados <= Conteudo Novo */
+nav a{
+    color: #27ae60;
+}
+
+/* Seletor de Filhos <= Conteudo Novo */
+nav > a{
+    display: block;
+    color: #f5a623;
+    padding: 10px;
+}
+
+/* Seletor de Classes */
+.laranja{
+    color: #f5a623;
+}
+
+.verde{
+    color: #27ae60;
+}
+
+/* Seletor de Id */
+#secao-principal{
+    padding: 20px;
+    text-align: center;
+}
+
+/* Combinação de seletores */
+#secao-principal > *{
+    margin-top: 10px;
+}
+
+input{
+    display: block;
+    padding: 5px;
+    margin: 5px;
+}
+
+/* Seletores de Sequência <= Conteudo Novo*/
+input + input{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+h2 + p{
+    padding: 30px;
+}
+
+/*Seletor de Propriedades <= Conteudo Novo*/
+input[name="email"]{
+    background-color: #f5a623;
+}
+
+input[type="password"]{
+    background-color: #27ae60;
+}
+
+/* Adicional meu : Henrique Gabriel */
+footer > p {
+    text-align: center;
+}
