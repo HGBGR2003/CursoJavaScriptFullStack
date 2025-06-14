@@ -1,0 +1,26 @@
+/* Primeiro vamos tirar as margens e preenchimentos padãos. */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+    /* Conteudo Novo */
+}
+
+ul > li{
+    border: 20px solid #3a3a3a;
+    background-color: #3a3a3a;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    height: 190px; 
+    width: 190px;
+    display: inline-block;
+    overflow: hidden; 
+    /* Conteudo Novo */
+}
+
+h2 , p{
+    color: #fff;
+}
+
+
