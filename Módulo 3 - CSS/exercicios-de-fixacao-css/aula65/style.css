@@ -32,3 +32,10 @@ header > h1{
   margin: 1rem 0.3rem;
   margin-bottom: 2.52rem;
 }
+
+footer{
+  text-align: center;
+  background-color: black;
+  color: #fff;
+  padding: 2rem;
+}
