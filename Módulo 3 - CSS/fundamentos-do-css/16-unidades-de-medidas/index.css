@@ -18,9 +18,43 @@ header{
 }
 
 section{
-    height: 75px;
+    height: 100px;
+    background-color: #ddd;
 }
 
 .px {
     height: 10px;
+}
+
+/* Root Element (Raiz do Elemento) => 16px (Fonte Padrão.) * 3 = 48px*/
+.rem{
+    height: 3rem;
+}
+
+/* Ele modifica na questão da fonte, sem alterar a altura padrão do prenchimento. */
+.em{
+    font-size: 32px;
+    padding: 1em;
+}
+
+.prcnt-33{
+    height: 33%;
+}
+
+.prcnt-66{
+    height: 66%;
+}
+
+.prcnt-100{
+    height: 100%;
+}
+
+/* ViewPort height (Visualização da porta, ou seja a janela total do site.) */
+.vh{
+    height: 30vh;
+}
+
+/* ViewPort width (Não recomendado para responsividade.) */
+.vw{
+    width: 50dvw;
 }
