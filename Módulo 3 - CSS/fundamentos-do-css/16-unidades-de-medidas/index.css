@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: #232323;
+    color: #fff;
+    padding: 10px;
+}
+
+.box{
+    border: 1px solid #232323;
+    display: inline-block;
+    width: 75px;
+    margin-top: 20px;
+    font-size: 16px;  /*<= Tamanho de letra padrão dos navegadores.*/
+}
+
+section{
+    height: 75px;
+}
+
+.px {
+    height: 10px;
+}
