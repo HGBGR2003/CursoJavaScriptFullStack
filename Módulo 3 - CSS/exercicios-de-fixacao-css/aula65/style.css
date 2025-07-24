@@ -55,3 +55,19 @@ footer{
 h2{
   color: #343332;
 }
+
+#menina-sentada{
+  height: 36rem;
+  width: 43rem;
+  margin-bottom: 1.87rem;
+}
+
+:hover.botao-preto{
+  background-color: #342587;
+  color: #c1701e;
+}
+
+:hover.botao-azul{
+  background-color: #6c1010;
+  color: #5c5392;
+}
