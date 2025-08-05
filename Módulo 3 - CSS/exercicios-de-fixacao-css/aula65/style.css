@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
   margin: 0;
@@ -9,11 +9,11 @@ header {
   text-align: center;
   margin-bottom: 1.5rem;
   font-size: 12px;
-  font-family: "Libre Baskerville", serif;
-
+  font-family: "Lora", serif;
 }
 
 .p1 {
+  font-family: "Lora", serif;
   margin-top: 0.5rem;
   font-size: 12px;
 }
@@ -36,19 +36,19 @@ header > h1{
 
 footer{
   text-align: center;
-  background-color: black;
+  background-color: #030308;
   color: #fff;
-  padding: 6.9rem;
+  padding: 2rem;
 }
 
 .botao-azul{
-  background-color: #67b5d1;
+  background-color: #43abf6;
   color: #fff;
-  border: 1px solid #67b5d1;
+  border: 1px solid #43abf6;
 }
 
 .botao-preto{
-  background-color: #000000;
+  background-color: #030308;
   color: #fff;
 }
 
