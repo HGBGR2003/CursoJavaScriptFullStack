@@ -22,3 +22,15 @@ li::before{
 li::after{
     content: " (depois)";
 }
+
+li:first-child{
+    color: #ffae00;
+}
+
+li:last-child{
+    color: #ff00b3;
+}
+
+li:not(:first-child){
+    color: #00ffff;
+}
