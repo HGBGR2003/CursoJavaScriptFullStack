@@ -143,3 +143,8 @@ a {
     right: 1rem;
 }
 
+footer{
+    margin-top: 4rem;
+    padding: 2rem;
+    text-align: center;
+}
