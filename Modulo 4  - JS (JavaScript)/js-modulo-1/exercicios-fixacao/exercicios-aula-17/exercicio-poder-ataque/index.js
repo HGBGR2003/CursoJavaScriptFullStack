@@ -1,54 +1,32 @@
-let nameCharacterGame
-let powerOfCharacter
-let pointsLife
-let haveShield
-let powerDefense
+//[
+const characterAtack = prompt("Insira seu nome de jogador atacante:")
 
-let nameCharacterSecond
-let pointsLifeOfSecondPlayer
-let powerDefenseSecondPlayer
-let haveShieldSecondPlayer
+const powerOfAtack =  prompt("Qual é seu poder de ataque:")
+
+const defender = prompt("Insira seu nome de jogador defensor:")
+
+const pointsLife = parseFloat(prompt("Quantos pontos de vida você possui:"))
+
+const powerDefense = parseFloat(prompt("Qual é o seu poder defesa?"))
+
+const haveShield = prompt("Possui o escudo: (Sim/Não)")
 
 let damage = 0
-
-nameCharacterGame = prompt("Insira seu nome de jogador:")
-powerOfCharacter = prompt("Qual é seu poder de ataque:")
-pointsLife = parseFloat(prompt("Quantos pontos de vida você possui:"))
-powerDefense = parseFloat(prompt("Qual é o seu poder defesa"))
-haveShield = prompt("Possui escudo: (sim/não)")
-
-nameCharacterSecond = prompt("Insira seu nome de jogador defensor:")
-pointsLifeOfSecondPlayer = parseFloat(prompt("Quantos pontos de vida você possui, player 2:"))
-powerDefenseSecondPlayer = parseFloat(prompt("Qual é o seu poder defesa, jogador 2"))
-haveShieldSecondPlayer = prompt("Possui escudo, jogador 2: (sim/não)")
-
-
-
-if (powerOfCharacter > powerDefenseSecondPlayer) {
-    if (haveShieldSecondPlayer.toLowerCase() === "sim") {
-        damage = (powerOfCharacter - powerDefenseSecondPlayer) / 2
-    } else {
-        damage = powerOfCharacter - powerDefenseSecondPlayer
-    }
-} else {
-    damage = 0
+// Corrigido as variáveis.] 
+//{
+if (powerOfCharacter > powerDefense && haveShield === "Não") {
+    damage = powerOfCharacter - powerDefense
+}else if(powerOfCharacter > powerDefense && haveShield === "Sim"){
+    damage = (powerOfCharacter - powerDefense) / 2
 }
-
+// Corrigindo a lógica do if e else.}
 pointsLifeOfSecondPlayer -= damage
 
+alert(characterAtack + " causou " + damage + " pontos de dano em " + defender)
 alert(
-  `Dano causado: ${damage}\n\n` +
-  `Atacante:\n` +
-  `  Nome: ${nameCharacterGame}\n` +
-  `  Poder de Ataque: ${powerOfCharacter}\n` +
-  `  Vida: ${pointsLife}\n` +
-  `  Defesa: ${powerDefense}\n` +
-  `  Escudo: ${haveShield}\n\n` +
-  `Defensor:\n` +
-  `  Nome: ${nameCharacterSecond}\n` +
-  `  Vida: ${pointsLifeOfSecondPlayer}\n` +
-  `  Defesa: ${powerDefenseSecondPlayer}\n` +
-  `  Escudo: ${haveShieldSecondPlayer}`
+    characterAtack + "\nPoder de ataque: " + powerOfAtack + "\n\n" +
+    defender + "\nPontos de vida: " + pointsLife + 
+    "\nPoder de defesa: " + powerDefense + "\nPossui escudo: " + haveShield 
 )
 
 
