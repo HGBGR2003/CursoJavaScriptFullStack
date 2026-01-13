@@ -1,15 +1,10 @@
-let primeiroVeiculo
-let segundoVeiculo
-let velocidadePrimeiro
-let velocidadeSegundo
+ const primeiroVeiculo = prompt("Informe o nome do primeiro veiculo:")
 
-primeiroVeiculo = prompt("Informe o nome do primeiro veiculo:")
+const velocidadePrimeiro = parseFloat(prompt("Informe a velocidade do primeiro veiculo:"))
 
-velocidadePrimeiro = parseFloat(prompt("Informe a velocidade do primeiro veiculo:"))
+const segundoVeiculo = prompt("Informe o nome do segundo veiculo:")
 
-segundoVeiculo = prompt("Informe o nome do segundo veiculo:")
-
-velocidadeSegundo = parseFloat(prompt("Informe a velocidade do segundo veiculo:"))
+const velocidadeSegundo = parseFloat(prompt("Informe a velocidade do segundo veiculo:"))
 
 if (velocidadePrimeiro > velocidadeSegundo) {
     console.log("O mais rápido é o primeiro carro.")
