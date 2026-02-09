@@ -10,7 +10,7 @@ do {
         "\n3. Sair"
     )
 
-    switch (key) {
+    switch (opcao) {
         case "1":
             saldo += parseFloat(prompt("Informe o valor a ser adicionado:"))
             break;
