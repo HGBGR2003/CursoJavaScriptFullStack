@@ -4,7 +4,7 @@ let valueResults = ""
 
 for (let i = 0; i <= 20; i++) {
     let multi = i * numberUser
-    valueResults += `${numberUser} x ${i} = ${multi}\n`
+    valueResults += "\n " + numberUser + " X " + i + " = " + multi
 }
 
 alert(valueResults)
