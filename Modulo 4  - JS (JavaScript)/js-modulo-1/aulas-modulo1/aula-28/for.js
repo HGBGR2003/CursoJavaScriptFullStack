@@ -1,5 +1,5 @@
-let i = 0
+let nome = "Henrique"
 
-for(i; i <= 10; i++){
-    alert("Os valores de i são: " + i)
+for (let i = 0; i < nome.length; i++) {
+    console.log(nome[i])
 }
