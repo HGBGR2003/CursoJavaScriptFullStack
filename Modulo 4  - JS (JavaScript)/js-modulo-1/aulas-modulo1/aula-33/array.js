@@ -26,3 +26,12 @@ ultimoElemento = arr.shift()
 console.log(arr)
 console.log(ultimoElemento)
 
+//Pesquisar por elementos:
+
+//includes
+const inclui = arr.includes("Gandalf")
+console.log(inclui)
+
+//indexOf
+const indice = arr.indexOf("Gandalf")
+console.log(indice)
