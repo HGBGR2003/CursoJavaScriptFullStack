@@ -35,3 +35,10 @@ console.log(inclui)
 //indexOf
 const indice = arr.indexOf("Gandalf")
 console.log(indice)
+
+//Cortar e Concatenar
+const hobbits = arr.slice(0, 4)
+const outros = arr.slice(-4)
+console.log(arr)
+console.log(hobbits)
+console.log(outros)
