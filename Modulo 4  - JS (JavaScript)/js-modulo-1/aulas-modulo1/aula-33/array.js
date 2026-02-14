@@ -1,6 +1,5 @@
 const arr = ["Frodo", "Sam", "Merry", "Pippin", "Gandalf", "Aragon",
     "Legolas", "Gimli"]
-
 console.log(arr)
 
 //Adicionar elementos: 
@@ -42,3 +41,19 @@ const outros = arr.slice(-4)
 console.log(arr)
 console.log(hobbits)
 console.log(outros)
+
+//concat
+const sociedade = hobbits.concat(outros, "Boromir")
+console.log(sociedade)
+
+//Substituição dos Elementos
+//splice
+const elementosResolvidos = sociedade.splice(indice, 1, "Gandalf, o Cinzento")
+console.log(sociedade)
+console.log(elementosResolvidos)
+
+//Iterando sobre os elementos do array
+for(let i = 0; i < sociedade.length; i++){
+    const elemento = sociedade[i]
+    console.log(elemento + " se encontra na posição " + indice)
+}
