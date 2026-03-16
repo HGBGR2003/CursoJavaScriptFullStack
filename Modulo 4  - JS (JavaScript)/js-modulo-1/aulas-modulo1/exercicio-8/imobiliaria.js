@@ -6,19 +6,19 @@ do {
     opcao = prompt(
         "Bem vindo(a) ao Cadastro de Imóveis!\n" + 
         "Total de Imóveis: " + imoveis.length +
-        "\n\nEscolha uma opção:\n1. Novo imóvel\n2. Lista imóveis\n3. Sair"
+        "\n\nEscolha uma opção:\n1. Novo imóvel\n2. Listar imóveis\n3. Sair"
     )
 
     switch (opcao) {
         case "1":
             const imovel = {}
 
-            imovel.proprietario = prompt("Informa o nome do proprietário do imóvel:")
+            imovel.proprietario = prompt("Informe o nome do proprietário do imóvel:")
             imovel.quartos = prompt("Quantos quartos possui o imóvel?")
             imovel.banheiros = prompt("Quantos banheiros possui o imóvel?")
             imovel.garagem = prompt("O imóvel possui garagem? (Sim/Não)")
 
-            const confirmacao = confirm(
+            const confirmacao = confirm( //<= Comando Novo.
                 "Salvar este imóvel?\n" + 
                 "\nProprietário: " + imovel.proprietario + 
                 "\nQuartos: " + imovel.quartos +
@@ -28,6 +28,9 @@ do {
 
             if (confirmacao) {
                 imoveis.push(imovel)
+                alert("Imóvel salvo com sucesso!")
+            }else{
+                alert("Voltando ao menu.")
             }
 
             break
@@ -42,7 +45,7 @@ do {
                     "\nPossui Garagem ? " + imoveis[i].garagem  
                 )
             }
-            
+
             break
 
         case "3":
