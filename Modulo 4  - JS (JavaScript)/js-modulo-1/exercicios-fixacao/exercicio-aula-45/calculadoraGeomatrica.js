@@ -35,69 +35,82 @@ do {
         "6. Sair\n"
     )
 
-
     switch (opcao) {
-        case "1":
-            let baseTriangulo = parseFloat(prompt("Digite a base do triângulo:"))
+        case "1": {
+            let base = parseFloat(prompt("Digite a base do triângulo:"))
+            let altura = parseFloat(prompt("Digite a altura do triângulo:"))
 
-            let alturaTriangulo = parseFloat(prompt("Digite a altura do triângulo:"))
-
-            if (baseTriangulo || alturaTriangulo < 0) {
-
-                baseTriangulo = parseFloat(prompt("Digite a base do triângulo:"))
-
-                alturaTriangulo = parseFloat(prompt("Digite a altura do triângulo:"))
-
-            } else {
-                let chamadaTriangulo = areaTriangulo(baseTriangulo, alturaTriangulo)
-
-                alert("A área do triângulo é: " + chamadaTriangulo)
+            while (base < 0 || altura < 0) {
+                alert("Valores não podem ser negativos!")
+                base = parseFloat(prompt("Digite a base do triângulo:"))
+                altura = parseFloat(prompt("Digite a altura do triângulo:"))
             }
 
+            alert("A área do triângulo é: " + areaTriangulo(base, altura))
             break
+        }
 
-        case "2":
-            let baseRetangulo = parseFloat(prompt("Digite a base do retângulo:"))
+        case "2": {
+            let base = parseFloat(prompt("Digite a base do retângulo:"))
+            let altura = parseFloat(prompt("Digite a altura do retângulo:"))
 
-            let alturaRetangulo = parseFloat(prompt("Digite a altura do retângulo:"))
+            while (base < 0 || altura < 0) {
+                alert("Valores não podem ser negativos!")
+                base = parseFloat(prompt("Digite a base do retângulo:"))
+                altura = parseFloat(prompt("Digite a altura do retângulo:"))
+            }
 
-            let chamadaRetangulo = areaRetangulo(baseRetangulo, alturaRetangulo)
-            alert("A área do retângulo é: " + chamadaRetangulo)
+            alert("A área do retângulo é: " + areaRetangulo(base, altura))
             break
+        }
 
-        case "3":
-            let lado = parseFloat(prompt("Digite o lado do quadrado, para determinar sua área:"))
+        case "3": {
+            let lado = parseFloat(prompt("Digite o lado do quadrado:"))
 
-            let chamadaQuadrado = areaQuadrado(lado)
-            alert("A área do retângulo é: " + chamadaQuadrado)
+            while (lado < 0) {
+                alert("O valor não pode ser negativo!")
+                lado = parseFloat(prompt("Digite o lado do quadrado:"))
+            }
+
+            alert("A área do quadrado é: " + areaQuadrado(lado))
             break
+        }
 
-        case "4":
-
+        case "4": {
             let baseMaior = parseFloat(prompt("Digite a maior base do trapézio:"))
-
             let baseMenor = parseFloat(prompt("Digite a menor base do trapézio:"))
-
             let altura = parseFloat(prompt("Digite a altura do trapézio:"))
 
-            let chamadaTrapzeio = areaTrapezio(baseMaior, baseMenor, altura)
-            alert("A área do trapézio é: " + chamadaTrapzeio)
+            while (baseMaior < 0 || baseMenor < 0 || altura < 0) {
+                alert("Valores não podem ser negativos!")
+                baseMaior = parseFloat(prompt("Digite a maior base do trapézio:"))
+                baseMenor = parseFloat(prompt("Digite a menor base do trapézio:"))
+                altura = parseFloat(prompt("Digite a altura do trapézio:"))
+            }
+
+            alert("A área do trapézio é: " + areaTrapezio(baseMaior, baseMenor, altura))
             break
+        }
 
-
-        case "5":
+        case "5": {
             let raio = parseFloat(prompt("Defina o raio da circunferência:"))
-            let chamadaCirculo = areaCirculo(raio)
-            alert("A área do círculo é: " + chamadaCirculo)
+
+            while (raio < 0) {
+                alert("O valor não pode ser negativo!")
+                raio = parseFloat(prompt("Defina o raio da circunferência:"))
+            }
+
+            alert("A área do círculo é: " + areaCirculo(raio))
             break
+        }
 
         case "6":
             alert("Finalizando....")
             break
 
         default:
-            alert("Operação Inválida tente novamente.")
-            break;
+            alert("Operação inválida, tente novamente.")
+            break
     }
 
-} while (opcao != "6");
+} while (opcao != "6")
