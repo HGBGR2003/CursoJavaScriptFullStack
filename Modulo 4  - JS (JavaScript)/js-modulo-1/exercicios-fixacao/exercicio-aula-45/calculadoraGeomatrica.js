@@ -26,7 +26,6 @@ function areaCirculo(raio) {
     return calculoAreaCirculo
 }
 
-
 do {
 
     opcao = prompt(
@@ -36,14 +35,25 @@ do {
         "6. Sair\n"
     )
 
+
     switch (opcao) {
         case "1":
             let baseTriangulo = parseFloat(prompt("Digite a base do triângulo:"))
 
             let alturaTriangulo = parseFloat(prompt("Digite a altura do triângulo:"))
 
-            let chamadaTriangulo = areaTriangulo(baseTriangulo, alturaTriangulo)
-            alert("A área do triângulo é: " + chamadaTriangulo)
+            if (baseTriangulo || alturaTriangulo < 0) {
+
+                baseTriangulo = parseFloat(prompt("Digite a base do triângulo:"))
+
+                alturaTriangulo = parseFloat(prompt("Digite a altura do triângulo:"))
+
+            } else {
+                let chamadaTriangulo = areaTriangulo(baseTriangulo, alturaTriangulo)
+
+                alert("A área do triângulo é: " + chamadaTriangulo)
+            }
+
             break
 
         case "2":
@@ -64,14 +74,29 @@ do {
 
         case "4":
 
+            let baseMaior = parseFloat(prompt("Digite a maior base do trapézio:"))
+
+            let baseMenor = parseFloat(prompt("Digite a menor base do trapézio:"))
+
+            let altura = parseFloat(prompt("Digite a altura do trapézio:"))
+
+            let chamadaTrapzeio = areaTrapezio(baseMaior, baseMenor, altura)
+            alert("A área do trapézio é: " + chamadaTrapzeio)
+            break
+
 
         case "5":
+            let raio = parseFloat(prompt("Defina o raio da circunferência:"))
+            let chamadaCirculo = areaCirculo(raio)
+            alert("A área do círculo é: " + chamadaCirculo)
+            break
 
         case "6":
             alert("Finalizando....")
             break
 
         default:
+            alert("Operação Inválida tente novamente.")
             break;
     }
 
