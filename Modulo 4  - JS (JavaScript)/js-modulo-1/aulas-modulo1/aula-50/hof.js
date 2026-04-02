@@ -16,3 +16,26 @@ function somar(x, y) {
     return x - y
 }))
  
+function exibirElemento(elemento, indice, array) {
+    console.log({
+        elemento,
+        indice,
+        array
+    })
+}
+
+const lista = ["Maça", "Banana", "Laranja", "Limão"]
+
+for (let i = 0; i < lista.length; i++) {
+    exibirElemento(lista[i], i, lista)
+}
+
+lista.forEach(exibirElemento) // <= Ele mostra o elemento, o indice e a array completa.
+
+lista.forEach(function(elemento, indice, array){
+    console.log({
+        elemento,
+        indice,
+        array
+    })
+})
