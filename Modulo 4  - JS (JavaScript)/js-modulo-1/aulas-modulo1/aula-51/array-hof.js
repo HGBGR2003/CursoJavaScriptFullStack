@@ -37,9 +37,8 @@ const orcs = personagens.filter(function (personagem) {
 
 console.log(orcs);
 
-//Reduce
-
 // Reduce: serve para reduzir um array existente a um valor final qualquer.
+
 const nivelTotal = personagens.reduce(function (valorAcumulado, personagem){
     return valorAcumulado + personagem.nivel
 }, 0)
@@ -60,3 +59,11 @@ const racas = personagens.reduce(function (valorAcumulado, personagem){
 }, {})
 
 console.log(racas)
+
+//Sort: ordena os elementos de um array a partir de comparações entre duplas de elementos.
+
+ const ordenacao = personagens.slice().sort(function (personagemA, personagemB){
+  return personagemA.nivel - personagemB.nivel
+})
+
+console.log(ordenacao)
