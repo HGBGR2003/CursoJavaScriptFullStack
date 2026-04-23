@@ -4,7 +4,7 @@ function listarVagas() {
   const vagasEmTexto = vagas.reduce(function (textoFinal, vaga, indice) {
     textoFinal += indice + ". ";
     textoFinal += vaga.nome;
-    textoFinal += " (" + vaga.canditados.length + " canditados)\n";
+    textoFinal += " (" + vaga.candidatos.length + " candidatos)\n";
     return textoFinal;
   }, "");
 
@@ -19,7 +19,7 @@ function novaVaga() {
   );
 
   const confirmacao = confirm(
-    "Deseja criar uma nova vaga com esssas informações?\n" +
+    "Deseja criar uma nova vaga com essas informações?\n" +
       "Nome: " +
       nome +
       "\nDescrição: " +
@@ -33,7 +33,7 @@ function novaVaga() {
       nome,
       descricao,
       dataLimite,
-      canditados: [],
+      candidatos: [],
     };
 
     vagas.push(novaVaga);
@@ -51,7 +51,7 @@ function exibirVaga() {
 
   const vaga = vagas[indice];
 
-  const candidatosEmTexto = vaga.canditados.reduce(function (
+  const candidatosEmTexto = vaga.candidatos.reduce(function (
     textoFinal,
     candidato,
   ) {
@@ -75,7 +75,7 @@ function exibirVaga() {
 }
 
 function inscreverCandidato() {
-  const canditado = prompt("Informe o nome do (a) candidato(a):");
+  const candidato = prompt("Informe o nome do (a) candidato(a):");
   const indice = prompt(
     "Informe o índice da vaga para qual o(a) candidato(a) deseja se inscrever:",
   );
@@ -83,7 +83,7 @@ function inscreverCandidato() {
 
   const confirmacao = confirm(
     "Deseja inscrever o candidato " +
-      canditado +
+      candidato +
       " na vaga " +
       indice +
       "?\n" +
@@ -96,7 +96,7 @@ function inscreverCandidato() {
   );
 
   if (confirmacao) {
-    vaga.candidatos.push(canditado);
+    vaga.candidatos.push(candidato);
     alert("Inscrição realizada com sucesso.");
   }
 }
@@ -105,7 +105,7 @@ function excluirVaga() {
   const indice = prompt("Informe o índice da vaga que deseja excluir:");
   const vaga = vagas[indice];
 
-  const confirmação = confirm(
+  const confirmacao = confirm(
     "Tem certeza que deseja excluir a vaga " +
       indice +
       "?\n" +
@@ -117,9 +117,9 @@ function excluirVaga() {
       vaga.dataLimite,
   );
 
-  if (confirmação) {
-    vagas.splice(indice, 1); //Excluir a vaga que queremos no indice e a quantidade de vagas a ser excluida.
-    alert("Vaga excluida");
+  if (confirmacao) {
+    vagas.splice(indice, 1);
+    alert("Vaga excluída");
   }
 }
 
@@ -175,4 +175,4 @@ function executar() {
   } while (opcao !== "6");
 }
 
-executar()
+executar();
