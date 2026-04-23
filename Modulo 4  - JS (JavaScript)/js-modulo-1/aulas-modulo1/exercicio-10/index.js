@@ -43,6 +43,12 @@ function novaVaga() {
 
 function exibirVaga() {
   const indice = prompt("Informe o índice da vaga que deseja exibir:");
+
+  if (indice >= vagas.length || indice < 0) {
+    alert("Indice inválido");
+    return;
+  }
+
   const vaga = vagas[indice];
 
   const candidatosEmTexto = vaga.canditados.reduce(function (
@@ -128,7 +134,45 @@ function exibirMenu() {
       "\n5. Excluir uma vaga" +
       "\n6. Sair",
   );
-
-  return opcao
-
+  return opcao;
 }
+
+function executar() {
+  let opcao = "";
+
+  do {
+    opcao = exibirMenu();
+
+    switch (opcao) {
+      case "1":
+        listarVagas();
+        break;
+
+      case "2":
+        novaVaga();
+        break;
+
+      case "3":
+        exibirVaga();
+        break;
+
+      case "4":
+        inscreverCandidato();
+        break;
+
+      case "5":
+        excluirVaga();
+        break;
+
+      case "6":
+        alert("Saindo....");
+        break;
+
+      default:
+        alert("Opção inválida.");
+        break;
+    }
+  } while (opcao !== "6");
+}
+
+executar()
