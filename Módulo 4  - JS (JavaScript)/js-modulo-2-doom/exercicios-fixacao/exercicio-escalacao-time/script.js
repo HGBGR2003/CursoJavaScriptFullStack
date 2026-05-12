@@ -1,9 +1,49 @@
-function playerAdd(){
-    const playersList = document.getElementById('players-list')
-    const ul = document.createElement('ul')
-    
+function playerAdd() {
+  const posicion = document.getElementById("posicion");
+  const namePlayer = document.getElementById("name");
+  const numberPlayer = document.getElementById("numberPlayer");
+
+  if (!posicion.value || !namePlayer.value || !numberPlayer.value) {
+    alert("Preencha todos os campos antes de escalar.");
+    return;
+  }
+
+  const confirmation = confirm(
+    "Deseja confirmar a escalação?\n\n" +
+      "Posição: " +
+      posicion.value +
+      "\n" +
+      "Nome: " +
+      namePlayer.value +
+      "\n" +
+      "Camisa: nº" +
+      numberPlayer.value,
+  );
+
+  if (confirmation == true) {
+    const playersList = document.getElementById("players-list");
+
+    const ul = document.createElement("ul");
+    ul.className = "show-players";
+
+    const posiLi = document.createElement("li");
+    const nameLi = document.createElement("li");
+    const numberLi = document.createElement("li");
+
+    posiLi.innerText = "Posição do Jogador: " + posicion.value;
+    nameLi.innerText = "Nome do Jogador: " + namePlayer.value;
+    numberLi.innerText = "Número do Jogador: " + numberPlayer.value;
+
+    ul.appendChild(posiLi);
+    ul.appendChild(nameLi);
+    ul.appendChild(numberLi);
+
+    playersList.appendChild(ul);
+
+    posicion.value = "";
+    namePlayer.value = "";
+    numberPlayer.value = "";
+  }
 }
 
-function playerRemove(){
-
-}
+function playerRemove() {}

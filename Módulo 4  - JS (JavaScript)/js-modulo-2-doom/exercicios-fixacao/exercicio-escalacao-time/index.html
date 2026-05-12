@@ -12,7 +12,25 @@
 
     <h2>Jogadores</h2>
 
-    <button onclick="playerAdd()">Jogador Novo</button>
+
+    <section class="main-things">
+        <label for="text">Posicao do Jogador:</label>
+        <input type="text" name="posicion" id="posicion">
+
+        <br><br>
+
+        <label for="text">Nome do Jogador:</label>
+        <input type="text" name="name" id="name">
+
+        <br><br>
+
+        <label for="text">Número do Jogador:</label>
+        <input type="number" name="number" id="numberPlayer">
+    </section>
+
+    <br>
+
+    <button onclick="playerAdd()">Escalar Jogador</button>
     <button onclick="playerRemove()">Remover Jogador</button>
 
     <section id="players-list"></section>
