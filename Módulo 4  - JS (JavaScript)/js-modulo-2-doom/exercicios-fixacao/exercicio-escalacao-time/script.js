@@ -16,7 +16,7 @@ function playerAdd() {
       "Nome: " +
       namePlayer.value +
       "\n" +
-      "Camisa: nº" +
+      "Camisa: " +
       numberPlayer.value,
   );
 
@@ -46,18 +46,41 @@ function playerAdd() {
 }
 
 function playerRemove() {
+  const removeNumber = document.getElementById("removeNumber");
+
+  if (!removeNumber.value) {
+    alert("Informe  o número da camisa do jogador a remover.");
+    return;
+  }
+
   const playersList = document.getElementById("players-list");
 
   const entries = playersList.getElementsByTagName("ul");
 
-  if (entries.length == 0) {
-    alert("Não existe jogadores para remover");
+  let found = 0;
+
+  for (let i = 0; i < entries.length; i++) {
+    if (
+      entries[i].innerText.includes("Número do Jogador: " + removeNumber.value)
+    ) {
+      found = entries[i];
+      break;
+    }
+  }
+
+  if (!found) {
+    alert(
+      "Nenhum jogador com a camisa nº" +
+        removeNumber.value +
+        " foi encontrado.",
+    );
     return;
   }
 
   const confirmation = confirm("Deseja exlcluir o Jogador");
 
   if (confirmation == true) {
-    playersList.removeChild(entries[entries - 1]);
+    playersList.removeChild(found);
+    removeNumber.value = "";
   }
 }
