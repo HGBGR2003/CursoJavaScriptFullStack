@@ -24,7 +24,6 @@ function playerAdd() {
     const playersList = document.getElementById("players-list");
 
     const ul = document.createElement("ul");
-    ul.className = "show-players";
 
     const posiLi = document.createElement("li");
     const nameLi = document.createElement("li");
@@ -46,4 +45,19 @@ function playerAdd() {
   }
 }
 
-function playerRemove() {}
+function playerRemove() {
+  const playersList = document.getElementById("players-list");
+
+  const entries = playersList.getElementsByTagName("ul");
+
+  if (entries.length == 0) {
+    alert("Não existe jogadores para remover");
+    return;
+  }
+
+  const confirmation = confirm("Deseja exlcluir o Jogador");
+
+  if (confirmation == true) {
+    playersList.removeChild(entries[entries - 1]);
+  }
+}
