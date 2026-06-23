@@ -3,6 +3,8 @@ function addPlayer() {
   const name = document.getElementById("name").value;
   const number = document.getElementById("number").value;
 
+  //console.log({positon, name, number}) <= Aparece como objeto.
+
   const confirmation = confirm("Escalar" + name + " como " + position + "?");
 
   if (confirmation) {
@@ -15,7 +17,7 @@ function addPlayer() {
 
     document.getElementById("position").value = "";
     document.getElementById("name").value = "";
-    document.getElementById("number").value = "";
+    document.getElementById("number").value = ""; 
   }
 }
 
@@ -28,7 +30,7 @@ function removePlayer() {
   );
 
   if (confirmation) {
-    document.getElementById("team-list").removeChild(playerToRemove);
+    playerToRemove.remove()
     document.getElementById("numberToRemove").value = "";
   }
 }
